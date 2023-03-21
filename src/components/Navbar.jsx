@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { IoMenuOutline, IoChevronDown, IoPaperPlane } from "react-icons/io5";
+import {
+  IoMenuOutline,
+  IoChevronDown,
+  IoPaperPlane,
+  IoCloseOutline,
+} from "react-icons/io5";
 import nitttrLogo from "../assets/nitttr-logo.png";
 
 import { menus } from "../utils/Menulinks";
 
 export default function Navbar() {
+
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <>
       <nav
@@ -27,7 +35,16 @@ export default function Navbar() {
               <IoPaperPlane className={"text-rose-500 h-[24px] w-[24px]"} />
               <div className="flex flex-col">
                 <span className="font-bold mb-0">Email Us</span>
-                <Link to={"someone@example.com"} className="hover:underline">someone@example.com</Link>
+                <Link
+                  to="/#"
+                  onClick={(e) => {
+                    window.location.href = "mailto:someone@example.com";
+                    e.preventDefault();
+                  }}
+                  className="hover:underline"
+                >
+                  someone@example.com
+                </Link>
               </div>
             </div>
           </div>
@@ -38,7 +55,7 @@ export default function Navbar() {
                   <div className="relative group" key={menu.link}>
                     <Link
                       to={menu.link}
-                      className="whitespace-wrap overflow-hidden text-ellipsis py-1 px-2 flex items-center gap-1 uppercase w-fit  hover:bg-gray-600 rounded text-red-200 md:text-gray-200 lg:px-3 lg:py-2"
+                      className="whitespace-wrap overflow-hidden text-ellipsis py-1 px-2 flex items-center gap-1 uppercase w-fit hover:bg-gray-600 rounded text-red-200 md:text-gray-200 lg:px-3 lg:py-2"
                     >
                       {menu.name}
                       {/* <span className="whitespace-wrap overflow-hidden text-ellipsis">
@@ -48,7 +65,7 @@ export default function Navbar() {
                     </Link>
                     {menu.children && (
                       <div className="absolute hidden z-10 min-w-[250px]  group-hover:flex bg-transparent">
-                        <div className="flex flex-col mt-2 px-1 py-2 pb-3 shadow-lg rounded bg-gradient-to-b from-gray-500 to-gray-400">
+                        <div className="flex flex-col mt-2 px-1 py-2 pb-3 shadow-lg rounded bg-gradient-to-b from-gray-400 to-gray-500">
                           {menu.children.map((elem) => {
                             let elem_link = elem
                               .toLowerCase()
@@ -56,6 +73,7 @@ export default function Navbar() {
                             return (
                               <Link
                                 key={elem_link}
+                                to={elem_link}
                                 className="text-gray-200 px-2 py-2 rounded hover:bg-gray-600"
                               >
                                 <span>{elem}</span>
@@ -70,11 +88,26 @@ export default function Navbar() {
               })}
             </div>
           </div>
-          <div className="absolute top-[70%] flex w-full justify-center  md:hidden">
-            <IoMenuOutline className="z-20 h-[48px] w-[48px] bg-slate-200 rounded-full p-2 cursor-pointer text-slate-800 shadow-lg" />
+          <div className="absolute top-[70%] flex w-full justify-center md:hidden">
+            <div
+              className="z-20 h-[48px] w-[48px] bg-slate-200 rounded-full p-2 cursor-pointer text-slate-800 shadow-lg"
+              onClick={(e) => {
+                e.preventDefault();
+                setNavOpen(!navOpen);
+              }}
+            >
+              {navOpen ? (
+                <IoCloseOutline className="h-[100%] w-[100%]" />
+                ) : (
+                <IoMenuOutline className="h-[100%] w-[100%]" />
+              )}
+            </div>
           </div>
-          <div className="absolute z-10 px-1 w-full top-[105%] h-[100%] hidden">
-            <div className="flex flex-col px-2 pt-2 pb-4 rounded shadow bg-slate-500">
+          <div
+            className="absolute z-10 px-0 w-full top-[105%] h-[auto] ease-in duration-1000"
+            style={{ display: navOpen ? "block" : "none" }}
+          >
+            <div className="flex flex-col px-2 pt-5 pb-4 rounded shadow bg-slate-500">
               {menus.map((menu) => {
                 return (
                   <>

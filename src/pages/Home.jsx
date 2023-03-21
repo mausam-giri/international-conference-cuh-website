@@ -2,8 +2,9 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from 'react-router-dom';
+
 import banner from "../assets/conbanner.jpg";
-import {data} from '../utils/HomeContent'
+import { sponsors_img } from '../utils/HomeContent';
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="bg-white mt-6">
-        <div className="s-wrapper grid grid-cols-1 md:gap-4 md:grid-cols-7">
+        <div className="s-wrapper grid grid-cols-1 md:gap-10 md:grid-cols-7">
           <div className="col-span-5 px-4 md:px-0">
             <span className="ml-1">AIIoT</span>
             <h1 className="text-3xl font-bold">Conference</h1>
@@ -74,25 +75,46 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           <div className="col-span-2 p-4 md:px-0">
-            <div className="shadow-md rounded shadow-slate-400 p-2 px-3 pt-4 pb-6">
-              <h2 className="font-bold text-lg text-slate-700 mb-4">
-                Important Notice
-              </h2>
+            <div className="flex flex-col gap-4 shadow-md rounded shadow-slate-400 p-2 px-3 pt-4 pb-6">
+              <div>
+                <h2 className="font-bold text-lg text-slate-700 mb-4">
+                  Important Notice
+                </h2>
+                <div className="pl-2 flex flex-col gap-3">
+                  <Link
+                    to="https://fdp.nitttrchd.ac.in/icaiot2023/Prog_sch.php"
+                    className="text-[14px] hover:text-slate-500"
+                  >
+                    Programme and Paper Presentaion Schedule
+                  </Link>
+                  <Link
+                    to="https://fdp.nitttrchd.ac.in/icaiot2023/acceptedpaper.php"
+                    className="text-[14px] hover:text-slate-500 "
+                  >
+                    List of TENTATIVELY ACCEPTED PAPERS
+                  </Link>
+                </div>
+              </div>
               <hr />
-              <div className="pl-2 flex flex-col gap-3">
-                <Link
-                  to="https://fdp.nitttrchd.ac.in/icaiot2023/Prog_sch.php"
-                  className="text-[14px] hover:text-slate-500"
-                >
-                  Programme and Paper Presentaion Schedule
-                </Link>
-                <Link
-                  to="https://fdp.nitttrchd.ac.in/icaiot2023/acceptedpaper.php"
-                  className="text-[14px] hover:text-slate-500 "
-                >
-                  List of TENTATIVELY ACCEPTED PAPERS
-                </Link>
+              <div>
+                <h2 className="font-bold text-lg text-slate-700 mb-4">
+                  Sponsors
+                </h2>
+                <div className="pl-2 flex justify-around gap-3">
+                  {
+                    sponsors_img.map((img, index) => {
+                      return (
+                        <img 
+                          key={index} 
+                          src={img} 
+                          className={'h-24 w-24'}
+                          alt={img} />
+                      )
+                    })
+                  }
+                </div>
               </div>
             </div>
           </div>

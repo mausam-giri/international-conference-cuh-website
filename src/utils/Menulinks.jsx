@@ -11,8 +11,8 @@ export const menus = [
     name: "committee",
     link: "committee",
     children: [
-      "Organising Committee",
       "Advisory Committee",
+      "Organising Committee",
       "Technical Program Committee",
     ],
   },
@@ -28,15 +28,15 @@ export const menus = [
     children: [
       "Submission",
       "Registration",
-      "Proceeding Editors",
       "Important Dates",
       "Program Schedule",
+      "Proceeding Editors",
     ],
   },
   {
     name: "Conference info",
     link: "conference-info",
-    children: ["Conference venue", "Contact us", "Sponsors"],
+    children: ["Conference Venue", "Sponsors", "Contact us"],
   },
   {
     name: "History",
@@ -50,10 +50,10 @@ export const footerMenus = [
     name: "committee",
     link: "committee",
     children: [
-      "Organising Committee",
-      "Advisory Committee",
-      "Technical Program Committee",
       "Invited Speakers",
+      "Advisory Committee",
+      "Organising Committee",
+      "Technical Program Committee",
     ],
   },
   {
@@ -62,7 +62,6 @@ export const footerMenus = [
     children: [
       "Submission",
       "Registration",
-
       "Important Dates",
       "Program Schedule",
     ],
@@ -71,7 +70,7 @@ export const footerMenus = [
     name: "Conference info",
     link: "conference-info",
     children: [
-      "Conference venue",
+      "Venue Info.",
       "Proceeding Editors",
       "Sponsors",
       "Contact us",
@@ -84,20 +83,25 @@ export const footerMenus = [
   },
 ];
 
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
+import {
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoTwitter,
+} from "react-icons/io5";
+
 export const socialMediaLinks = [
   {
-    icon: IoLogoFacebook,
+    icon: (props) => <IoLogoFacebook {...props} />,
     name: "facebook",
     link: "/#",
   },
   {
-    icon: IoLogoTwitter,
+    icon: (props) => <IoLogoTwitter {...props} />,
     name: "twitter",
     link: "/#",
   },
   {
-    icon: IoLogoInstagram,
+    icon: (props) => <IoLogoInstagram {...props} />,
     name: "instagram",
     link: "/#",
   },

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Sanchez&display=swap");
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,14 +26,13 @@ img {
   max-width: 100%;
 }
 
-
 /* Custom width */
 div.s-wrapper {
   max-width: 1200px;
   margin: auto;
 }
 
-hr{
+hr {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
@@ -40,10 +41,10 @@ hr{
 .carousel-root {
   border-radius: 0.25rem;
 }
-.carousel.carousel-slider{
+.carousel.carousel-slider {
   border-radius: 0.25rem;
   overflow: hidden;
 }
-.thumbs.animated{
+.thumbs.animated {
   text-align: center;
 }

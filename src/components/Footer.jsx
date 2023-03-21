@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 import nitttrLogo from "../assets/nitttr-logo.png";
 import { footerMenus, socialMediaLinks } from "../utils/Menulinks";
-import { IoLogoFacebook } from "react-icons/io5";
+import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import SocialButton from "./SocialButton";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-b from-slate-500 to-slate-600 mt-6 pt-4">
+    <footer className="w-full bg-gradient-to-b from-slate-500 to-slate-600 mt-6 pt-9 rounded-t-2xl">
       <div className="mx-auto s-wrapper p-0 px-4 md:p-2">
         <div className="md:flex md:justify-between md:px-0">
           <div className="mb-6 md:mb-0">
             <Link
               to="/"
-              className="flex items-center flex-wrap justify-center text-center"
+              className="flex items-center flex-wrap justify-start text-center sm:justify-center"
             >
               <img
                 src={nitttrLogo}
@@ -73,15 +73,18 @@ export default function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0 pb-2">
-            {socialMediaLinks &&
-              socialMediaLinks.map((links) => {
-                <SocialButton
-                  key={links.name}
-                  href={links.link}
-                  srText={links.name}
-                  icon={links.icon}
-                />;
-              })}
+            <SocialButton>
+              <IoLogoFacebook className="h-6 w-6 text-slate-900 hover:text-slate-400" />
+            </SocialButton>
+            <SocialButton>
+              <IoLogoTwitter className="h-6 w-6 text-slate-900 hover:text-slate-400" />
+            </SocialButton>
+            <SocialButton>
+              <IoLogoInstagram className="h-6 w-6 text-slate-900 hover:text-slate-400" />
+            </SocialButton>
+            <SocialButton>
+              <IoLogoLinkedin className="h-6 w-6 text-slate-900 hover:text-slate-400" />
+            </SocialButton>
           </div>
         </div>
       </div>
