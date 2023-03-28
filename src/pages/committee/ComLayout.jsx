@@ -4,7 +4,7 @@ import PageHeader from "../../components/PageHeader";
 
 import technicalComData from "../../utils/committee_data/technical_com.json";
 import organizingCommitteData from "../../utils/committee_data/organising_com.json";
-import professorLogo from "../../assets/professor.png";
+import {professorLogo} from "../../utils/GraphicContent";
 
 const CommitteMember = ({ data: x }) => {
   return (
@@ -41,7 +41,7 @@ const CommitteHeader = ({ label }) => {
   );
 };
 
-const CommitteCard = ({ data }) => {
+const CommitteCard = ({ data, sph }) => {
   const [startIndex, setStartIndex] = useState(16);
 
   return (

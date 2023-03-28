@@ -57,3 +57,8 @@ export const contact = [
     loc: "National Institute of Technical Teachers Training and Research, Chandigarh, India",
   },
 ];
+
+export const submissionRequirements = 
+  {
+    link: `https://fdp.nitttrchd.ac.in/icaiot2023/downloads/Microsoft+Word+Proceedings+Templates.zip`,
+  };

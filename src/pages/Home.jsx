@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { Link } from 'react-router-dom';
 
 import banner from "../assets/conbanner.jpg";
-import { sponsors_img } from '../utils/HomeContent';
+import { sponsors_img } from '../utils/GraphicContent';
 
 export default function Home() {
   return (

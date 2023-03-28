@@ -1,0 +1,28 @@
+{
+    "members": [
+        {
+            "name": "Prof. Math Bollen",
+            "university": ["Professor, Electric Power Engineering", "Luleå University of Technology, Skellefteå, Sweden"],
+            "talk": "Title of invited talk: Artificial Intelligence of Things in Power grid",
+            "cv_link": "https://fdp.nitttrchd.ac.in/icaiot2023/downloads/Prof.%20Math%20Bollen_CV.docx.pdf",
+            "image": "2023/invited-speakers/mathbollen.png"
+        },
+        {
+          "name": "Dr. Mani Madhkar",
+          "university": [
+            "CSR for Academia",
+            "IBM India Pvt. Ltd."
+          ],
+          "talk": "Title of invited talk: AI for AI",
+          "cv_link": "https://fdp.nitttrchd.ac.in/icaiot2023/downloads/manimadhukar.pdf",
+          "image": "2023/invited-speakers/manimadhkar.png"
+        },
+        {
+          "name": "Dr. Mani Madhkar",
+          "university": ["CSR for Academia", "IBM India Pvt. Ltd."],
+          "talk": "Title of invited talk: AI for AI",
+          "cv_link": "https://fdp.nitttrchd.ac.in/icaiot2023/downloads/manimadhukar.pdf",
+          "image": "2023/invited-speakers/manimadhkar.png"
+        }
+    ]
+}
