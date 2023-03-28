@@ -8,7 +8,7 @@ import professorLogo from "../../assets/professor.png";
 
 const CommitteMember = ({ data: x }) => {
   return (
-    <div className="flex flex-col w-[35ch] px-4 py-6 border border-gray-300 rounded-lg shadow bg-slate-300 text-sm">
+    <div className="flex flex-col w-[30ch] px-4 py-6 border border-gray-300 rounded-lg shadow bg-slate-300 text-sm md:w-[35ch]">
       <div className="flex gap-4">
         <div className="max-w-[30px] pt-1">
           <img
@@ -45,7 +45,7 @@ const CommitteCard = ({ data }) => {
   const [startIndex, setStartIndex] = useState(16);
 
   return (
-    <div className="s-wrapper px-4 md:px-0">
+    <div className="s-wrapper px-1 md:px-0">
       {data.isCategory ? (
         Object.keys(data.categories).map((cat, catI) => {
           const mems = data[cat];
@@ -71,7 +71,7 @@ const CommitteCard = ({ data }) => {
           </div>
           {startIndex < data.members.length && (
             <button
-              className="py-2 px-4 border-gray-200 border rounded-md shadow bg-slate-300 text-black uppercase hover:bg-slate-700 hover:text-gray-200 transition ease-in duration-300"
+              className="py-2 px-4 border-gray-200 border rounded-md shadow bg-slate-300 text-black uppercase hover:bg-slate-700 hover:text-gray-200 transition ease-in duration-300 text-sm"
               onClick={(e) => {
                 setStartIndex((prevStartIndex) => prevStartIndex + 16);
               }}

@@ -112,7 +112,6 @@ export default function Navbar() {
                   <div key={index} className="relative group">
                     <Link
                       to={menu.link}
-                      key={menu.link}
                       className="p-2 w-full flex items-center gap-1 text-gray-200 rounded uppercase hover:bg-slate-600"
                     >
                       {menu.name}
@@ -125,9 +124,10 @@ export default function Navbar() {
                           {menu.children.map((elem) => {
                             let elem_link = elem
                               .toLowerCase()
-                              .replace(" ", "-");
+                              .replaceAll(" ", "-");
                             return (
                               <Link
+                                to={elem_link}
                                 key={elem_link}
                                 className="text-gray-200 px-2 py-2 rounded hover:bg-slate-700"
                               >
