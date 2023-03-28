@@ -1,0 +1,68 @@
+{
+  "isCategory": true,
+  "categories": 
+    {
+      "p": "Patron",
+      "cc": "Conference Chairs",
+      "ccc": "Conference Co-Chairs",
+      "loc": "Local Organizing Committee"
+    }
+  ,
+  "p": [
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    },
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    }
+  ],
+  "ccc": [
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    },
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    }
+  ],
+  "loc": [
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    },
+    {
+      "name": "Prof. Bhola Ram Gurjar",
+      "job": "Director",
+      "dept": "",
+      "univ": "National Institute of Technical Teachers Training and Research",
+      "loc": "Chandigarh, India"
+    }
+  ]
+}

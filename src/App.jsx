@@ -22,7 +22,15 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/call-for-papers" element={<CallForPapers />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/advisory-committee" element={<ComLayout/>}/>
+        {/* <Route path="/advisory-committee" element={<ComLayout />} />
+        <Route path="/organising-committee" element={<ComLayout />} /> */}
+        {[
+          "/advisory-committee",
+          "/organising-committee",
+          "/technical-program-committee",
+        ].map((path, index) => (
+          <Route path={path} element={<ComLayout />} key={index} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
 

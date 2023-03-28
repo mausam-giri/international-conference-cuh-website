@@ -32,23 +32,23 @@ export default function Footer() {
           </div>
           <div className="grid grid-cols-2 gap-4 mt-2 sm:gap-6 sm:grid-cols-4">
             {footerMenus &&
-              footerMenus.map((menu) => {
+              footerMenus.map((menu, i) => {
                 return (
-                  <div key={menu.link}>
+                  <div key={i}>
                     <h2 className="uppercase text-gray-200 mb-6 text-sm font-semibold">
                       {menu.name}
                     </h2>
                     <ul className="text-gray-400">
                       {menu.children &&
-                        menu.children.map((elem) => {
+                        menu.children.map((elem, j) => {
                           let elem_link = elem
                             .toLowerCase()
                             .trim()
                             .replace(" ", "-");
                           return (
-                            <>
+                     
                               <li
-                                key={elem_link}
+                                key={j}
                                 className="mb-2 whitespace-nowrap text-ellipsis overflow-hidden"
                               >
                                 <Link
@@ -58,7 +58,7 @@ export default function Footer() {
                                   {elem}
                                 </Link>
                               </li>
-                            </>
+                        
                           );
                         })}
                     </ul>
@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-300 sm:text-center">
             © 2023{" "}
-            <Link to="/" class="hover:underline">
+            <Link to="/" className="hover:underline">
               NITTTR Chandigarh
             </Link>
             . All Rights Reserved.

@@ -12,7 +12,6 @@ import nitttrLogo from "../assets/nitttr-logo.png";
 import { menus } from "../utils/Menulinks";
 
 export default function Navbar() {
-
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -52,7 +51,7 @@ export default function Navbar() {
             <div className="flex flex-wrap justify-center items-center gap-1 bg-gradient-to-b from-gray-400 to-gray-500 rounded shadow-lg py-1 px-1">
               {menus.map((menu) => {
                 return (
-                  <div className="relative group" key={menu.link}>
+                  <div className="relative group" key={menu.name}>
                     <Link
                       to={menu.link}
                       className="whitespace-wrap overflow-hidden text-ellipsis py-1 px-2 flex items-center gap-1 uppercase w-fit hover:bg-gray-600 rounded text-red-200 md:text-gray-200 lg:px-3 lg:py-2"
@@ -64,17 +63,17 @@ export default function Navbar() {
                       {menu.children && <IoChevronDown />}
                     </Link>
                     {menu.children && (
-                      <div className="absolute hidden z-10 min-w-[250px]  group-hover:flex bg-transparent">
+                      <div className="absolute hidden z-10 min-w-[255px]  group-hover:flex bg-transparent">
                         <div className="flex flex-col mt-2 px-1 py-2 pb-3 shadow-lg rounded bg-gradient-to-b from-gray-400 to-gray-500">
                           {menu.children.map((elem) => {
                             let elem_link = elem
                               .toLowerCase()
-                              .replace(" ", "-");
+                              .replaceAll(" ", "-");
                             return (
                               <Link
                                 key={elem_link}
                                 to={elem_link}
-                                className="text-gray-200 px-2 py-2 rounded hover:bg-gray-600"
+                                className="text-gray-200 px-4 py-2 rounded hover:bg-gray-600"
                               >
                                 <span>{elem}</span>
                               </Link>
@@ -88,7 +87,7 @@ export default function Navbar() {
               })}
             </div>
           </div>
-          <div className="absolute top-[70%] flex w-full justify-center md:hidden">
+          <div className="mob-navbar absolute top-[70%] flex w-full justify-center md:hidden">
             <div
               className="z-20 h-[48px] w-[48px] bg-slate-200 rounded-full p-2 cursor-pointer text-slate-800 shadow-lg"
               onClick={(e) => {
@@ -98,7 +97,7 @@ export default function Navbar() {
             >
               {navOpen ? (
                 <IoCloseOutline className="h-[100%] w-[100%]" />
-                ) : (
+              ) : (
                 <IoMenuOutline className="h-[100%] w-[100%]" />
               )}
             </div>
@@ -108,40 +107,38 @@ export default function Navbar() {
             style={{ display: navOpen ? "block" : "none" }}
           >
             <div className="flex flex-col px-2 pt-5 pb-4 rounded shadow bg-slate-500">
-              {menus.map((menu) => {
+              {menus.map((menu, index) => {
                 return (
-                  <>
-                    <div key={menu.link} className="relative group">
-                      <Link
-                        to={menu.link}
-                        key={menu.link}
-                        className="p-2 w-full flex items-center gap-1 text-gray-200 rounded uppercase hover:bg-slate-600"
-                      >
-                        {menu.name}
-                        {menu.children && <IoChevronDown />}
-                      </Link>
+                  <div key={index} className="relative group">
+                    <Link
+                      to={menu.link}
+                      key={menu.link}
+                      className="p-2 w-full flex items-center gap-1 text-gray-200 rounded uppercase hover:bg-slate-600"
+                    >
+                      {menu.name}
+                      {menu.children && <IoChevronDown />}
+                    </Link>
 
-                      {menu.children && (
-                        <div className="hidden px-2 pt-2 pb-4 bg-slate-600 rounded group-hover:flex">
-                          <div className="w-full flex flex-col gap-1">
-                            {menu.children.map((elem) => {
-                              let elem_link = elem
-                                .toLowerCase()
-                                .replace(" ", "-");
-                              return (
-                                <Link
-                                  key={elem_link}
-                                  className="text-gray-200 px-2 py-2 rounded hover:bg-slate-700"
-                                >
-                                  <span>{elem}</span>
-                                </Link>
-                              );
-                            })}
-                          </div>
+                    {menu.children && (
+                      <div className="hidden px-2 pt-2 pb-4 bg-slate-600 rounded group-hover:flex">
+                        <div className="w-full flex flex-col gap-1">
+                          {menu.children.map((elem) => {
+                            let elem_link = elem
+                              .toLowerCase()
+                              .replace(" ", "-");
+                            return (
+                              <Link
+                                key={elem_link}
+                                className="text-gray-200 px-2 py-2 rounded hover:bg-slate-700"
+                              >
+                                <span>{elem}</span>
+                              </Link>
+                            );
+                          })}
                         </div>
-                      )}
-                    </div>
-                  </>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>

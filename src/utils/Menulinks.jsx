@@ -9,7 +9,7 @@ export const menus = [
   },
   {
     name: "committee",
-    link: "committee",
+    link: "#",
     children: [
       "Advisory Committee",
       "Organising Committee",
@@ -18,13 +18,12 @@ export const menus = [
   },
   {
     name: "speakers",
-    link: "speakers",
-
+    link: "#",
     children: ["Invited Speakers"],
   },
   {
     name: "Attending",
-    link: "attending",
+    link: "#",
     children: [
       "Submission",
       "Registration",
@@ -35,12 +34,12 @@ export const menus = [
   },
   {
     name: "Conference info",
-    link: "conference-info",
+    link: "#",
     children: ["Conference Venue", "Sponsors", "Contact us"],
   },
   {
     name: "History",
-    link: "history",
+    link: "#",
     children: ["ICCCN-2018", "ICIIL-2019"],
   },
 ];
@@ -69,12 +68,7 @@ export const footerMenus = [
   {
     name: "Conference info",
     link: "conference-info",
-    children: [
-      "Venue Info.",
-      "Proceeding Editors",
-      "Sponsors",
-      "Contact us",
-    ],
+    children: ["Venue Info.", "Proceeding Editors", "Sponsors", "Contact us"],
   },
   {
     name: "History",
