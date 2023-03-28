@@ -42,6 +42,8 @@ const CommitteHeader = ({ label }) => {
 };
 
 const CommitteCard = ({ data }) => {
+  const [startIndex, setStartIndex] = useState(16);
+
   return (
     <div className="s-wrapper px-4 md:px-0">
       {data.isCategory ? (
@@ -60,11 +62,23 @@ const CommitteCard = ({ data }) => {
           );
         })
       ) : (
-        <div className="flex flex-wrap justify-center gap-4">
-          {data.members &&
-            data.members.map((x, i) => {
-              return <CommitteMember key={i} data={x} />;
-            })}
+        <div className="flex gap-4 flex-col justify-center items-center">
+          <div className="flex flex-wrap justify-center gap-4">
+            {data.members &&
+              data.members.slice(0, startIndex).map((x, i) => {
+                return <CommitteMember key={i} data={x} />;
+              })}
+          </div>
+          {startIndex < data.members.length && (
+            <button
+              className="py-2 px-4 border-gray-200 border rounded-md shadow bg-slate-300 text-black uppercase hover:bg-slate-700 hover:text-gray-200 transition ease-in duration-300"
+              onClick={(e) => {
+                setStartIndex((prevStartIndex) => prevStartIndex + 16);
+              }}
+            >
+              Load More
+            </button>
+          )}
         </div>
       )}
     </div>
