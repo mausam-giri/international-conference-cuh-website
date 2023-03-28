@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import CallForPapers from "./pages/CallForPapers";
 import NotFound from "./pages/404";
 import ContactUs from "./pages/ContactUs";
+import ComLayout from "./pages/committee/ComLayout";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/call-for-papers" element={<CallForPapers />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/advisory-committee" element={<ComLayout/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
 

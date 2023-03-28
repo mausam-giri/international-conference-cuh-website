@@ -8,9 +8,7 @@ import PageHeader from "../components/PageHeader";
 export default function CallForPapers() {
   return (
     <div>
-      <div className="bg-slate-500 w-full ">
-        <PageHeader text={"Call for Papers"} />
-      </div>
+      
       <div className="w-full py-[2rem] text-slate-700">
         <div className="s-wrapper px-4 md:px-0">
           <div className="grid grid-cols-1 gap-4 mb-4 md:grid-cols-3">

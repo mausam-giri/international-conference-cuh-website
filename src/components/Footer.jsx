@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="w-full bg-gradient-to-b from-slate-500 to-slate-600 mt-6 pt-9 rounded-t-2xl">
       <div className="mx-auto s-wrapper p-0 px-4 md:p-2">
         <div className="md:flex md:justify-between md:px-0">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 flex flex-col items-center gap-4 md:mb-0">
             <Link
               to="/"
               className="flex items-center flex-wrap justify-start text-center sm:justify-center"
@@ -25,6 +25,10 @@ export default function Footer() {
                 NITTTR Chandigarh
               </span>
             </Link>
+            <p className="md:max-w-[24ch] text-slate-300 text-center">
+              A leading resource institute for promoting excellence in technical
+              education system.
+            </p>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-2 sm:gap-6 sm:grid-cols-4">
             {footerMenus &&
