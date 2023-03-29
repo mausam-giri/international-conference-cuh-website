@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from 'react-router-dom';
 
-import banner from "../assets/conbanner.jpg";
+import banner from "../assets/conbanner.png";
 import { sponsors_img } from '../utils/GraphicContent';
 
 export default function Home() {

@@ -7,7 +7,7 @@ import {
   IoPaperPlane,
   IoCloseOutline,
 } from "react-icons/io5";
-import nitttrLogo from "../assets/nitttr-logo.png";
+import cuhLogo from "../assets/cuhLogo.png";
 
 import { menus } from "../utils/Menulinks";
 
@@ -24,10 +24,10 @@ export default function Navbar() {
           {/* Brand Logo & Content top section*/}
           <div className="w-full flex justify-between items-center py-2 px-2 sm:px-0">
             <Link to="/" className="flex gap-2">
-              <img src={nitttrLogo} className="h-14" alt="ITTTR Chandingarh" />
+              <img src={cuhLogo} className="h-14" alt="ITTTR Chandingarh" />
               <div className="flex flex-col justify-center">
-                <span className="text-xl font-bold">NITTTR </span>
-                <span className="font-bold">Chandigarh</span>
+                <span className="text-xl font-bold">Central University of Haryana </span>
+                <span className="font-bold">Mahendragarh</span>
               </div>
             </Link>
             <div className="flex gap-2 items-center">

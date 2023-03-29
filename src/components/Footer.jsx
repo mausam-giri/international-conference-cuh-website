@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import nitttrLogo from "../assets/nitttr-logo.png";
+import cuhLogo from "../assets/cuhLogo.png";
 import { footerMenus, socialMediaLinks } from "../utils/Menulinks";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import SocialButton from "./SocialButton";
@@ -17,12 +17,12 @@ export default function Footer() {
               className="flex items-center flex-wrap justify-start text-center sm:justify-center"
             >
               <img
-                src={nitttrLogo}
+                src={cuhLogo}
                 className="h-9 mr-3"
                 alt="NITTTR Chandigarh"
               />
-              <span className="self-center text-white text-xl font-semibold whitespace-pre-wrap dark:text-white">
-                NITTTR Chandigarh
+              <span className="text-white  font-semibold dark:text-white">
+                Central University of Haryana, Mahendragarh
               </span>
             </Link>
             <p className="md:max-w-[24ch] text-slate-300 text-center">
@@ -72,7 +72,7 @@ export default function Footer() {
           <span className="text-sm text-gray-300 sm:text-center">
             © 2023{" "}
             <Link to="/" className="hover:underline">
-              NITTTR Chandigarh
+              Central University of Haryana
             </Link>
             . All Rights Reserved.
           </span>
