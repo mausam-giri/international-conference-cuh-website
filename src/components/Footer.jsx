@@ -23,11 +23,11 @@ export default function Footer() {
             >
               <img
                 src={cuhLogo}
-                className="h-9 mr-3"
+                className="h-24 mr-3"
                 alt="Central University of Haryana"
               />
-              <span className="text-md font-semibold md:max-w-[35ch] text-white dark:text-white">
-                Central University of Haryana, Mahendragarh
+              <span className="self-center text-white text-xl font-semibold whitespace-pre-wrap dark:text-white">
+                Central University of Haryana
               </span>
             </Link>
             <p className="md:max-w-[24ch] text-slate-300 text-center">
