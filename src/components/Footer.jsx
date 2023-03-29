@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import cuhLogo from "../assets/nitttr-logo.png";
+import cuhLogo from "../assets/cuhLogo.png";
 import { footerMenus, socialMediaLinks } from "../utils/Menulinks";
 import {
   IoLogoFacebook,
