@@ -20,9 +20,9 @@ export default function ContactUs() {
               return (
                 <div
                   key={index}
-                  className="flex flex-col gap-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-4"
+                  className="flex flex-col gap-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-4 card"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex gap-4">
                     <FaUserTie className="h-8 w-8 p-1 rounded-full border-slate-500 border text-slate-700" />
                     <div>
                       <p>{elem.name}</p>

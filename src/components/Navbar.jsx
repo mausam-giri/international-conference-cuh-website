@@ -42,7 +42,7 @@ export default function Navbar() {
                   }}
                   className="hover:underline"
                 >
-                  someone@example.com
+                  helpline@cuh.ac.in
                 </Link>
               </div>
             </div>
