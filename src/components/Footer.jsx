@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import cuhLogo from "../assets/cuhlogo.png";
+import nitttrLogo from "../assets/nitttr-logo.png";
 import { footerMenus, socialMediaLinks } from "../utils/Menulinks";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import SocialButton from "./SocialButton";
