@@ -32,12 +32,12 @@ export default function Home() {
       <div className="bg-white mt-6">
         <div className="s-wrapper grid grid-cols-1 md:gap-10 md:grid-cols-7">
           <div className="col-span-5 px-4 md:px-0">
-            <span className="ml-1">ICICA</span>
+            <span className="ml-1">ICICAI</span>
             <h1 className="text-3xl font-bold">Conference</h1>
             <hr />
             <div className="mt-4 text-justify ">
               <p>
-              The International Conference on Innovative Computing and Artificial Intelligence (ICICA) is a premier conference dedicated to the dissemination of research and development in the field of computing and artificial intelligence. ICICA brings together researchers, engineers, and practitioners from academia and industry to exchange their ideas and experiences in various aspects of innovative computing and AI.
+              The International Conference on Innovative Computing and Artificial Intelligence (ICICAI) is a premier conference dedicated to the dissemination of research and development in the field of computing and artificial intelligence. ICICAI brings together researchers, engineers, and practitioners from academia and industry to exchange their ideas and experiences in various aspects of innovative computing and AI.
               </p>
               <br />
               <p>
@@ -57,15 +57,15 @@ export default function Home() {
               </p>
               <br />
               <p>
-              ICICA provides a platform for researchers and practitioners to present and discuss their latest research findings, innovations, and applications. The conference features keynote speeches, technical sessions, workshops, and poster sessions. Participants can also take part in various networking and social events, such as a banquet and a cultural tour.
+              ICICAI provides a platform for researchers and practitioners to present and discuss their latest research findings, innovations, and applications. The conference features keynote speeches, technical sessions, workshops, and poster sessions. Participants can also take part in various networking and social events, such as a banquet and a cultural tour.
               </p>
               <br />
               <p>
-              ICICA welcomes submissions of original research papers, survey papers, and technical notes. All submissions are peer-reviewed by an international program committee. Accepted papers will be published in the conference proceedings, which will be indexed by major databases, such as IEEE Xplore, ACM Digital Library, and Scopus.
+              ICICAI welcomes submissions of original research papers, survey papers, and technical notes. All submissions are peer-reviewed by an international program committee. Accepted papers will be published in the conference proceedings, which will be indexed by major databases, such as IEEE Xplore, ACM Digital Library, and Scopus.
               </p>
               <br />
               <p>
-              ICICA is held annually in different parts of the world, attracting participants from academia and industry worldwide. It provides an excellent opportunity for participants to learn about the latest trends and developments in innovative computing and AI and to network with their peers.
+              ICICAI is held annually in different parts of the world, attracting participants from academia and industry worldwide. It provides an excellent opportunity for participants to learn about the latest trends and developments in innovative computing and AI and to network with their peers.
               </p>
               <hr />
               <p>
