@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import nitttrLogo from "../assets/nitttr-logo.png";
+import cuhLogo from "../assets/nitttr-logo.png";
 import { footerMenus, socialMediaLinks } from "../utils/Menulinks";
-import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import {
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+} from "react-icons/io5";
 import SocialButton from "./SocialButton";
 
 export default function Footer() {
@@ -46,19 +51,17 @@ export default function Footer() {
                             .trim()
                             .replace(" ", "-");
                           return (
-                     
-                              <li
-                                key={j}
-                                className="mb-2 whitespace-nowrap text-ellipsis overflow-hidden"
+                            <li
+                              key={j}
+                              className="mb-2 whitespace-nowrap text-ellipsis overflow-hidden"
+                            >
+                              <Link
+                                to={elem_link}
+                                className="hover:underline hover:text-gray-200 "
                               >
-                                <Link
-                                  to={elem_link}
-                                  className="hover:underline hover:text-gray-200 "
-                                >
-                                  {elem}
-                                </Link>
-                              </li>
-                        
+                                {elem}
+                              </Link>
+                            </li>
                           );
                         })}
                     </ul>
