@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link to="/" className="flex gap-2">
               <img src={cuhLogo} className="h-14" alt="ITTTR Chandingarh" />
               <div className="flex flex-col justify-center">
-                <span className="text-xl font-bold">Central University of Haryana </span>
+                <span className="sm:text-xl font-bold">Central University of Haryana </span>
                 <span className="font-bold">Mahendragarh</span>
               </div>
             </Link>
