@@ -1,6 +1,5 @@
 # International Conference CUH
 
--- npm run dev
--- npm run build
 
-### React JS
+### Next TS
+Use next typescript for the converting the website
