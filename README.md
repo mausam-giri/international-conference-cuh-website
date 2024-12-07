@@ -1,6 +1,3 @@
-# International Conference CUH
+# International Conference website designed for Central University of Haryana
 
--- npm run dev
--- npm run build
-
-### React JS
+- Designed the landing page for the international conference for research paper.
